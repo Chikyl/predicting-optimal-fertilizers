@@ -117,7 +117,7 @@ The EDA notebook covers target balance, numerical and categorical distributions,
 
 ### Target distribution
 
-![Fertilizer distribution](images/fertilizer_distribution.png)
+![Fertilizer distribution](Assets/fertilizer_distribution.png)
 
 The target is **only mildly imbalanced**. Five classes sit between 14.8% and 15.3%, while `DAP` (12.6%) and `Urea` (12.3%) are slightly less common. No resampling is needed.
 
@@ -133,7 +133,7 @@ The target is **only mildly imbalanced**. Five classes sit between 14.8% and 15.
 
 ### Numerical features
 
-![Numerical feature distributions](images/numerical_features.png)
+![Numerical feature distributions](Assets/numerical_features.png)
 
 | Feature | Mean | Std. dev. | Min | Max |
 |---------|-----:|----------:|----:|----:|
@@ -148,14 +148,14 @@ All six features are integer-valued and look **roughly uniform** across their ra
 
 ### Categorical features
 
-![Categorical feature distributions](images/categorical_features.png)
+![Categorical feature distributions](Assets/categorical_features.png)
 
 - **Soil type** is nearly balanced, from Sandy (20.9%) to Loamy (19.4%).
 - **Crop type** is also fairly balanced. Paddy (11.4%) and Pulses (10.4%) are the largest groups, and Ground Nuts (8.1%) the smallest.
 
 ### Correlations
 
-![Correlation matrix](images/correlation_matrix.png)
+![Correlation matrix](Assets/correlation_matrix.png)
 
 After label-encoding the categorical columns, **every pairwise correlation is between about -0.01 and 0.02**, including each feature's correlation with the target. The strongest link with `Fertilizer Name` is `Soil Type` at 0.02. There is no multicollinearity to worry about, but also **no strong linear signal**, so tree-based models that capture interactions are a natural fit.
 
@@ -252,6 +252,3 @@ For each test `id`, the submission lists the **top 3 fertilizers, space-separate
 | 750004 | 20-20 Urea 10-26-26 |
 
 ---
-
-## Related Notebooks
-
